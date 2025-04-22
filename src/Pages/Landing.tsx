@@ -1,43 +1,117 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import "../Styles/Landing.css";
 
 import blobs from "../Assets/Images/blobs.svg";
 import chibi_me from "../Assets/Images/chibi_me.svg";
+import code from "../Assets/Images/code.svg";
+import art from "../Assets/Images/art.svg";
 
 const LandingPage = () => {
+  const [showError, setShowError] = useState(true);
+  const [iconsStage, setIconsStage] = useState("visible"); // "visible", "hiding", "hidden"
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  useEffect(() => {
+    // 1. Let ERROR pulse for 3s
+    const pulseTimer = setTimeout(() => {
+      setIconsStage("hiding"); // Start hiding icons
+    }, 3000);
+
+    // 2. Hide icons one-by-one (over ~2s total)
+    const hideIconsTimer = setTimeout(() => {
+      setIconsStage("hidden"); // All icons hidden
+      setShowError(false);     // Also hide ERROR
+    }, 5000);
+
+    // 3. 1 second pause with nothing visible
+    const finalStep = setTimeout(() => {
+      setShowWelcome(true);    // Show Welcome + icons again
+      setIconsStage("visible");
+    }, 7000);
+
+    return () => {
+      clearTimeout(pulseTimer);
+      clearTimeout(hideIconsTimer);
+      clearTimeout(finalStep);
+    };
+  }, []);
+
   return (
-    <div className="w-screen h-screen overflow-hidden relative bg-purple-400">
-      {/* Animated elements here */}
+    <div className="landing-page">
+      {/* CORNER ICONS */}
+      {iconsStage !== "hidden" && (
+        <>
+          <motion.img 
+            src={blobs}
+            className="blobs-top-right"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: iconsStage === "visible" ? 1 : 0 }}
+            transition={{ duration: 0.5 }}
+          />
+          <motion.img 
+            src={art}
+            className="art-top-left"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: iconsStage === "visible" ? 1 : 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          />
+          <motion.img 
+            src={code}
+            className="code-bottom-right"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: iconsStage === "visible" ? 1 : 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          />
+        </>
+      )}
 
-      <motion.img 
-        src={blobs}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 20, 0] }}
-        transition={{ duration: 10, repeat: Infinity }}
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      />
+      {/* CENTER TEXT */}
+      <AnimatePresence>
+        {showError && (
+          <motion.h1
+            key="error"
+            className="error-text"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0, 1, 0, 1, 0, 1, 0, 1, 1] }}
+            transition={{ duration: 3 }}
+            exit={{ opacity: 0, transition: { duration: 0.5 } }}
+          >
+            ERROR
+          </motion.h1>
+        )}
+        {!showError && showWelcome && (
+          <motion.h1
+            key="welcome"
+            className="welcome-container"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <h3 className="welcome-title">Hi, I'm Anhelina</h3>
 
-      {/* Other animated icons */}
+            <p className="welcome-description">A frontend developer with a stylus in one hand and React in the other. <br /><br />
+            This is my interactive resume: part playground, part experiment, and a glimpse into where I'm headed.<br /><br />
+            Most of what you'll see here started in college — but every line of code and pixel is mine.</p>
 
-      {/* Chibi Character in Center */}
-      <motion.img 
-        src={chibi_me}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 2, type: "spring", stiffness: 100 }}
-        className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
-      />
+          </motion.h1>
+        )}
+      </AnimatePresence>
 
-      {/* Welcome Text */}
-      <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 3 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-3xl font-bold text-white"
-      >
-        Welcome to My Creative World
-      </motion.h1>
+      {/* BOTTOM LEFT IMAGE + BUTTON */}
+      {showWelcome && (
+        <motion.div
+          className="landing-bottom-left"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          <img src={chibi_me} alt="Chibi" className="landing-image" />
+          <button className="enter-button">Let's Beggin</button>
+        </motion.div>
+      )}
     </div>
   );
-};
+}
 
 export default LandingPage;
