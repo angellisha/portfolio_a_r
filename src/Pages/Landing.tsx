@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import "../Styles/Landing.css";
 
@@ -8,6 +9,8 @@ import code from "../Assets/Images/code.svg";
 import art from "../Assets/Images/art.svg";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+  
   const [showError, setShowError] = useState(true);
   const [iconsStage, setIconsStage] = useState("visible"); // "visible", "hiding", "hidden"
   const [showWelcome, setShowWelcome] = useState(false);
@@ -107,7 +110,12 @@ const LandingPage = () => {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <img src={chibi_me} alt="Chibi" className="landing-image" />
-          <button className="enter-button">Let's Beggin</button>
+          <button
+            className="enter-button"
+            onClick={() => navigate("/home")} // Navigate to the home page
+          >
+            Let's Begin
+          </button>
         </motion.div>
       )}
     </div>

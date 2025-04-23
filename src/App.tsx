@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import './App.css';
 import Landing from './Pages/Landing';
+import Home from './Pages/Home';
 
 function Layout() {
   return (
@@ -10,6 +11,7 @@ function Layout() {
       <main className="mainContainer">
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </main>
     </div>
