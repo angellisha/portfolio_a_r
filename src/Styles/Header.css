@@ -16,8 +16,18 @@ nav {
 }
 
 a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     text-decoration: none;
     color: #ED7700;
     font-weight: bold;
     font-size: 24px;
+}
+
+.icon-header {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    color: #5B86E5;
 }

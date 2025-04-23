@@ -6,3 +6,122 @@
     height: auto;
     background-color: #F6EFE3;
 }
+
+
+/* About Container, Photo, Paragraph, Line */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #F6EFE3;  
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-image {
+    width: 450px;
+    height: auto;
+    margin: 0px 50px;
+}
+.about-paragraph {
+    width: 800px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.section-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 50%;
+    height: auto;
+}
+.section-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 50%;
+    height: auto;
+}
+
+/* Education Container, 3 Boxes */
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    height: auto;
+}
+.ed-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #9581B4;
+}
+.ed-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    border: 3px solid #9581B4;
+    border-radius: 20px;
+
+    margin-top: 10px;
+    padding: 10px;
+}
+.ed-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+.ed-box p {
+    font-size: 12px;
+}
+
+/* Skill container */
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    height: auto;
+}
+.skills-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 35%;
+    height: auto;
+    margin-top: 10px;
+
+    background-color: #9581B4;
+    border-radius: 20px;
+}
+.skills-box p {
+    font-size: 12px;
+}

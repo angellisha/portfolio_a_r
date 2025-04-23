@@ -1,19 +1,20 @@
 import React from 'react';
 import '../Styles/Header.css'; 
-import { FaHome, FaProjectDiagram, FaPaintBrush } from 'react-icons/fa';
+import { IoPersonCircleOutline, IoCodeSlash } from 'react-icons/io5';
+import { FaPaintbrush } from "react-icons/fa6";
 
 const Header: React.FC = () => {
     return (
         <header>
             <nav className='header-nav'>
-                <a href="#about" style={{ margin: '0 10px' }}>
-                    <FaHome /> Home
+                <a href="#about">
+                    <IoPersonCircleOutline className='icon-header' /> Home
                 </a>
-                <a href="#projects" style={{ margin: '0 10px' }}>
-                    <FaProjectDiagram /> Projects
+                <a href="#projects">
+                    <IoCodeSlash className='icon-header' /> Projects
                 </a>
-                <a href="#contact" style={{ margin: '0 10px' }}>
-                    <FaPaintBrush /> Designs/Art
+                <a href="#contact">
+                    <FaPaintbrush className='icon-header' /> Designs/Art
                 </a>
             </nav>
         </header>
