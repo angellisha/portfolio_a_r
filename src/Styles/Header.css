@@ -31,3 +31,13 @@ a {
     margin-right: 20px;
     color: #5B86E5;
 }
+
+@media screen and (max-width: 768px) {
+    a {
+        font-size: 18px;
+    }
+    .icon-header {
+        width: 24px;
+        height: 24px;
+    }   
+}
