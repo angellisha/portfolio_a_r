@@ -1,0 +1,120 @@
+.p-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #F6EFE3;
+  }
+  
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.3s ease;
+    column-gap: 150px;
+    row-gap: 40px;
+  }
+  
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #9581b485;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    width: 280px;
+    height: fit-content;
+    cursor: pointer;
+  }
+  
+  .project-header {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: all 0.4s ease;
+  }
+  
+  .project-card.focused .project-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .project-image {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+  }
+  
+  .project-card.focused .project-image {
+    width: 50%;
+    transform: translateX(-20px);
+  }
+  
+  .project-description {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .project-card.focused .project-description {
+    opacity: 1;
+    max-height: 500px;
+    margin-left: 20px;
+    width: 50%;
+  }
+  
+  .focused {
+    width: 60%;
+    flex-direction: row;
+    background-color: #fff;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .gallery-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .project-card {
+      width: 90%;
+    }
+  
+    .focused {
+      flex-direction: row;
+      width: 100%;
+    }
+  
+    .focused .project-image {
+      width: 30%;
+      transform: translateX(-20px);
+    }
+  
+    .focused .project-description {
+      width: 30%;
+      margin-left: 0;
+    }
+}  
