@@ -1,6 +1,7 @@
 import React from 'react';
 import "../Styles/Home.css";
 import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 import { MdOutlineSchool, MdKeyboardDoubleArrowRight, MdWorkOutline } from "react-icons/md";
 import { IoLanguageOutline } from "react-icons/io5";
@@ -9,6 +10,9 @@ import { FaStar, FaRegStar } from "react-icons/fa";
 import Banner from '../Assets/Images/Banner.png';
 import AboutPhoto from '../Assets/Images/main_photo_polaroid_nobg.png';
 import Line from '../Assets/Images/line.svg';
+
+import FloatingIcon from '../Components/FloatingIcons';
+import HeartRed from '../Assets/Images/red_heart.png';
 
 const Home = () => {
     return(
@@ -60,6 +64,7 @@ const Home = () => {
 
                     {/* Skills Container */}
                     <div className='skills'>
+                        <FloatingIcon src={HeartRed} className="floating-redheart" />
                         <h2 className='info-title'>SKILLS</h2>
                         <div className='skills-box'>
                             <MdKeyboardDoubleArrowRight className='info-icon' />
@@ -152,6 +157,8 @@ const Home = () => {
 
                 </div>
             </div>
+
+            <Footer />
         </div>
     )
 };
