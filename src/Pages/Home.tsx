@@ -12,7 +12,11 @@ import AboutPhoto from '../Assets/Images/main_photo_polaroid_nobg.png';
 import Line from '../Assets/Images/line.svg';
 
 import FloatingIcon from '../Components/FloatingIcons';
-import HeartRed from '../Assets/Images/red_heart.png';
+import Star from '../Assets/Images/star.png';
+import PinkHeart from '../Assets/Images/pink_heart.png';
+import Cloud from '../Assets/Images/cloud.png';
+import BlueHeart from '../Assets/Images/blue_heart.png';
+import Thunder from '../Assets/Images/thunder.png';
 
 const Home = () => {
     return(
@@ -41,6 +45,7 @@ const Home = () => {
 
                     {/* Education Container */}
                     <div className='education'>
+                        <FloatingIcon src={PinkHeart} className="floating-pinkheart" />
                         <h2 className='info-title'>EDUCATION</h2>
                         <div className='ed-box'>
                             <MdOutlineSchool className='info-icon' />     
@@ -64,7 +69,7 @@ const Home = () => {
 
                     {/* Skills Container */}
                     <div className='skills'>
-                        <FloatingIcon src={HeartRed} className="floating-redheart" />
+                        <FloatingIcon src={Star} className="floating-star" />
                         <h2 className='info-title'>SKILLS</h2>
                         <div className='skills-box'>
                             <MdKeyboardDoubleArrowRight className='info-icon' />
@@ -96,6 +101,7 @@ const Home = () => {
 
                 <div className='section-right'>
                     <div className='work'>
+                        <FloatingIcon src={BlueHeart} className="floating-blueheart" />
                         <h2 className='info-title'>WORK EXPERIENCE</h2>
                         <div className='work-section'>
                             
@@ -127,9 +133,11 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
+                        <FloatingIcon src={Thunder} className="floating-thunder" />
                     </div>
 
                     <div className='languages'>
+                        <FloatingIcon src={Cloud} className="floating-cloud" />
                         <h2 className='info-title'>LANGUAGES</h2>
                         <div className='languages-box'>
                             <IoLanguageOutline className='info-icon' />
