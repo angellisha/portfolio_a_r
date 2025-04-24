@@ -109,7 +109,7 @@ const LandingPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <img src={chibi_me} alt="Chibi" className="landing-image" />
+          <img src={chibi_me} alt="Chibi" className="chibi-image" />
           <button
             className="enter-button"
             onClick={() => navigate("/home")} // Navigate to the home page

@@ -69,7 +69,7 @@
     flex-direction: row;
     align-items: end;
   }
-  .landing-image {
+  .chibi-image {
     width: 300px;
     height: auto;
   }
@@ -89,3 +89,66 @@
     background-color: #73638a;
   }
   
+
+  @media screen and (min-width: 800px) and (max-width: 1200px) {
+    .blobs-top-right {
+      width: 350px;
+    }
+    .code-bottom-right {
+      width: 350px;
+    }
+    .art-top-left {
+      width: 350px;
+    }
+    .error-text {
+      font-size: 86px;
+    }
+    .welcome-title {
+      font-size: 42px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .welcome-description {
+      font-size: 14px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .chibi-image {
+      width: 150px;
+    }
+    .enter-button {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .blobs-top-right {
+      width: 300px;
+    }
+    .code-bottom-right {
+      width: 300px;
+    }
+    .art-top-left {
+      width: 300px;
+    }
+    .error-text {
+      font-size: 64px;
+    }
+    .welcome-title {
+      font-size: 32px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .welcome-description {
+      font-size: 12px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .chibi-image {
+      width: 150px;
+    }
+    .enter-button {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  }
