@@ -4,6 +4,9 @@ import '../Assets/Styles/Projects.css';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 
+import Star from '../Assets/Images/star.png';
+import FloatingIcon from '../Components/FloatingIcons';
+
 import CherryBlossom from '../Assets/Images/Cherry_Blossom.png';
 import GarysDiner from "../Assets/Images/Gary's_Blue_Diner.png";
 import MythticPhoto from '../Assets/Images/Mythical_Photography.png';
@@ -64,6 +67,10 @@ const Projects: React.FC = () => {
         <p>
             Welcome to my project gallery! This is a collection of personal and collaborative works I've built to explore design, code, and creativity. Each project highlights different skills, tools, and concepts I've been learning along the way — from animations to functional UI, from clean layouts to full-stack features. I'm constantly growing, and this space evolves with me!
         </p>
+      </div>
+      <div className="floating-icons">
+        <FloatingIcon src={Star} className="floating-star-left" />
+        <FloatingIcon src={Star} className="floating-star-right" />
       </div>
       <div className="projects-container">
         {projects.map((project, index) => (

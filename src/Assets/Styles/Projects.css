@@ -16,6 +16,23 @@
     background-color: #9581B4;
     border-radius: 20px;
   }
+
+  .floating-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -30px;
+    margin-bottom: -20px;
+    width: 90%;
+    height: auto;
+  }
+    .floating-star-left {
+        width: 110px;
+        height: auto;
+    }
+    .floating-star-right {
+        width: 110px;
+        height: auto;
+    }
   
   .projects-container {
     display: flex;

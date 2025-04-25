@@ -24,8 +24,8 @@ const Footer: React.FC = () => {
             <div className="footer-right">
               <p>
                 <IoIosLink /> LinkedIn:{" "}
-                <a href="https://github.com/AnhelinaRom" target="_blank" rel="noopener noreferrer">
-                  https://github.com/AnhelinaRom
+                <a href="https://www.linkedin.com/in/anhelina-romanchuk-24b9412a8/" target="_blank" rel="noopener noreferrer">
+                    https://www.linkedin.com/in/anhelina-romanchuk-24b9412a8/
                 </a>
               </p>
               <p>

@@ -1,12 +1,13 @@
-.projects-page {
+.designs-art-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    height: auto;
     background-color: #F6EFE3;
   }
-  .project-intro {
+  
+  .designart-intro {
     max-width: 80%;
     padding: 10px 20px;;
     text-align: center;
@@ -15,5 +16,87 @@
     color: #ffffff;
     background-color: #9581B4;
     border-radius: 20px;
+  }
+
+  .floating-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -30px;
+    margin-bottom: -20px;
+    width: 90%;
+    height: auto;
+  }
+    .floating-star-left {
+        width: 110px;
+        height: auto;
+    }
+    .floating-star-right {
+        width: 110px;
+        height: auto;
+    }
+  
+  .carousel-section {
+    margin: 40px auto;
+    max-width: 90%;
+    text-align: center;
+    width: 90%;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 12px;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+  
+  .carousel-image {
+    max-height: 300px;
+    height: auto;
+    width: auto;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .carousel-btn {
+    background-color: #ffffff;
+    border: 2px solid #888;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 0 10px;
+  }
+  
+  .carousel-btn:hover {
+    background-color: #eee;
+  }
+  
+  .carousel-track::-webkit-scrollbar {
+    display: none;
   }
   

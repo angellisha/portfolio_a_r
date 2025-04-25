@@ -24,6 +24,10 @@ a {
     font-weight: bold;
     font-size: 24px;
 }
+a:hover {
+    color: #5B86E5;
+    transition: 0.3s;
+}
 
 .icon-header {
     width: 40px;
