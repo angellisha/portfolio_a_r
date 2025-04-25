@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import "../Styles/Landing.css";
+import "../Assets/Styles/Landing.css";
 
 import blobs from "../Assets/Images/blobs.svg";
 import chibi_me from "../Assets/Images/chibi_me.svg";

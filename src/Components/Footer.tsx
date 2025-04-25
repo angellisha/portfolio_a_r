@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/Footer.css';
+import '../Assets/Styles/Footer.css';
 
 import { IoIosLink } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";

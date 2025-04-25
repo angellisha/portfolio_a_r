@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/Header.css'; 
+import '../Assets/Styles/Header.css'; 
 import { IoPersonCircleOutline, IoCodeSlash } from 'react-icons/io5';
 import { FaPaintbrush } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
                 <a href="#projects" onClick={() => navigate("/projects")}>
                     <IoCodeSlash className='icon-header' /> Projects
                 </a>
-                <a href="#contact" onClick={() => navigate("/projects")}>
+                <a href="#contact" onClick={() => navigate("/designsart")}>
                     <FaPaintbrush className='icon-header' /> Designs/Art
                 </a>
             </nav>
